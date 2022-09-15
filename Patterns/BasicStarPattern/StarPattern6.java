@@ -1,4 +1,4 @@
-package StarPattern;
+package Patterns.BasicStarPattern;
 
 /*
 
