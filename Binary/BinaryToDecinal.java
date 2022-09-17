@@ -1,4 +1,4 @@
-package Patterns.Binary;
+package Binary;
 
 
 
@@ -20,8 +20,8 @@ public class BinaryToDecinal {
         return sum;
     }
     public static void main(String[] args) {
-        int binary = 1010;
-        int ans = BinaryConvToDec(binary);
+        int binaryo = 101;
+        int ans = BinaryConvToDec(binaryo);
         System.out.print(ans);
     }
 }

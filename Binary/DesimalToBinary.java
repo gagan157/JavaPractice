@@ -1,6 +1,4 @@
-package Patterns.Binary;
-
-import java.util.*;
+package Binary;
 
 public class DesimalToBinary {
 
@@ -19,7 +17,7 @@ public class DesimalToBinary {
     }
 
     public static void main(String[] args) {
-        int num = 10;
+        int num = 5;
         int ans = DecimalConvToBinary(num);
         System.out.print(ans);
     }
