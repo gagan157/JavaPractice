@@ -36,7 +36,7 @@ class BubbleSort {
 
 public class BubbSort {
     public static void main(String[] args) {
-        int [] arr = {2,1};
+        int [] arr = {3, 4, 2, 7, 8, 1};
         BubbleSort bs = new BubbleSort();
         bs.sort(arr);
         bs.printArray(arr);
