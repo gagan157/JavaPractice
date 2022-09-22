@@ -1,20 +1,22 @@
-package LeetCode;
+package LeetCode.Matrix2D;
 
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int row = matrix.length;
         int col = matrix[0].length;
-        // System.out.println(col);
+       
         int start = 0;
         int end =(row*col)-1;
         
         while(start <= end){
             int mid = start + (end - start)/2;
-            // System.out.println(mid);
+            
+            //cal row index
             int rowindex = mid/col;
+            //cal col index
             int colindex = mid%col;
-            // System.out.println("rowind "+rowindex+" colind "+colindex);
+           
             
             
             

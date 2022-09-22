@@ -70,12 +70,12 @@ public class RemoveAllDuplicates {
 
     }
     public static void main(String[] args) {
-        int[] arr = {3,5,3,2,4,6,3};
+        int[] arr = {0,0,0,1,2,3,4,5,6};
 
         // int[] newarr = solution1(arr);
 
         // int size = solution2(arr);
-        // printArray(arr,size);
+        // printArray(arr,arr.length);
 
         // solution3(arr);
 
