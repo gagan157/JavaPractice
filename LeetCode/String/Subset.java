@@ -2,7 +2,7 @@ package LeetCode.String;
 import java.util.*;
 
 public class Subset {
-    public void solvesubset(int[] nums,int idx,List<Integer>output,List<List<Integer>>  ans){
+    public static void solvesubset(int[] nums,int idx,List<Integer>output,List<List<Integer>>  ans){
         if(idx >= nums.length){
             ans.add(output);
             return;
@@ -20,7 +20,7 @@ public class Subset {
         
         
     }
-    public List<List<Integer>> subsetss(int[] nums) {
+    public static List<List<Integer>> subset(int[] nums) {
        int idx = 0;
        List<List<Integer>> ans = new ArrayList<List<Integer>>();
        List<Integer> output = new ArrayList<Integer>();
@@ -30,8 +30,8 @@ public class Subset {
     }
     public static void main(String[] args) {
         int arr[] = {1,2,3};
-        List<List<Integer>> ans = subsetss(arr);
-        for (int i = 0; i < ans.length; i++) {
+        List<List<Integer>> ans = subset(arr);
+        for (int i = 0; i < ans.size(); i++) {
             System.out.println(ans.get(i));
         }
     }
