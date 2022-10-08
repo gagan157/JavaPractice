@@ -28,6 +28,7 @@ public class RemoveAllDuplicates {
         return temp;
     }
 
+    //need sorting array 
     public static int solution2(int[]arr) {
         int j=0;
         for (int i = 0; i < arr.length-1; i++) {
@@ -70,16 +71,16 @@ public class RemoveAllDuplicates {
 
     }
     public static void main(String[] args) {
-        int[] arr = {0,0,0,1,2,3,4,5,6};
+        int[] arr = {2,5,2,3,3,1};
 
         // int[] newarr = solution1(arr);
 
         // int size = solution2(arr);
-        // printArray(arr,arr.length);
+        
+        int ans = solution2(arr);
+        printArray(arr,ans);
 
-        // solution3(arr);
-
-        solution4(arr);
+        // solution4(arr);
 
     }
 }

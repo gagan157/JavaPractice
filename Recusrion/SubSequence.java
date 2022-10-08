@@ -27,6 +27,7 @@ public class SubSequence {
         String remstr = str.substring(1);
 
         ArrayList<String> restr = solution2(remstr);
+        
         ArrayList<String> newarr = new ArrayList<>();
         
         for (String string : restr) {

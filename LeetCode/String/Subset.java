@@ -2,21 +2,23 @@ package LeetCode.String;
 import java.util.*;
 
 public class Subset {
-    public static void solvesubset(int[] nums,int idx,List<Integer>output,List<List<Integer>>  ans){
+    public static void solvesubset(int[] nums,int idx,List<Integer> output,List<List<Integer>>  ans){
         if(idx >= nums.length){
             ans.add(output);
+            
             return;
         }
         
              
         //exclude
-        solvesubset(nums,idx+1,output,ans);
-        
-        
+        solvesubset(nums,idx+1,output,ans);        
         //include
+        // List<Integer> newoutput = new ArrayList<>();
         int element = nums[idx];
         output.add(element);
-        solvesubset(nums,idx+1,output,ans);        
+        solvesubset(nums,idx+1,output,ans);   
+             
+        output.remove(output.size()-1);
         
         
     }
