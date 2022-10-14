@@ -25,11 +25,11 @@ public class SumOfTwoArrays {
             sum = arr1num + arr2num + carry;
           
            
-            int  rem = sum % 10;
+            sum = sum % 10;
             carry = sum/10;
             
 
-            list.add(0,rem);
+            list.add(0,sum);
 
             arr2end--;
             arr1end--;

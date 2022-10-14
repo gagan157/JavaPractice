@@ -1,8 +1,11 @@
 package NewtonMock;
 
-/*Given an array Arr[] that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.
+
+/*
+Given an array Arr[] that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.less than O(n^2)
 
 Input: arr[] = {-1, -3, -10, 0, 60}
+2,3,-2,-1 
 
 Output: 60 */
 
@@ -39,27 +42,31 @@ public class mock {
     }
 
     public static void maxProduct(int arr[]) {
-        int max = Integer.MIN_VALUE;
+        int max = arr[0];
+        int min = arr[0];
 
-        int sum = 1;
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] != 0){
-                sum *= arr[i];
-            }
-            if(sum > max){
-                max = sum;
+        int maxp = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i] < 0){
+                int temp = max;
+                max = min;
+                min = temp;
             }
 
-          
+            max = Math.max(arr[i], max * arr[i]);
+            min = Math.min(arr[i], min * arr[i]);
+
+            maxp = Math.max(maxp, max);
         }
-        System.out.println(sum);
+        System.out.print(maxp);
     }
 
     public static void main(String[] args) {
-        // int arr[] = {2,3,-2,-1};
-        // maxProduct(arr);
-        int arr[] = {7, 8, 9, 10, 3};
-        int ans = findMinEle(arr);
-        System.out.println(ans);
+        int arr[] = {2,3,-2,-1};
+        maxProduct(arr);
+        // int arr[] = {7, 8, 9, 10, 3};
+        // int ans = findMinEle(arr);
+        // System.out.println(ans);
     }
 }

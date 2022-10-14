@@ -3,7 +3,6 @@ package PracticeLoveBabberSheet.Arrays;
 
 
 class Pair {
-
     int max;
     int min;    
 }
