@@ -1,6 +1,8 @@
 package NewtonMock;
 //1,3,4,7,10
 
+
+
 // x = 15
 public class Mock3 {
     public static void findClosetSum(int arr[],int target) {
@@ -29,7 +31,9 @@ public class Mock3 {
            else{
             end--;
            }
+          
         }
+
         System.out.print(par1+" "+par2);
     }
     public static void main(String[] args) {
