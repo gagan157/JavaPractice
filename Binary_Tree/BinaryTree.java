@@ -18,7 +18,8 @@ class Node{
 
 public class BinaryTree {
     // static int arr[] = {1, 3, 7, -1, -1, 11, -1, -1, 5, 17, -1, -1, -1};
-    static int arr[] = {1,3,5,7,11,17,-1,-1,-1,-1,-1,-1,-1};
+    static int arr[] = {1,3,5,7,11,17,-1,-1,-1,-1,-1,20,-1};
+    static int countLeafNode = 0;
     static int i = 0;
     public static Node buildTree(Node root){
         // Scanner sc = new Scanner(System.in);
@@ -42,7 +43,7 @@ public class BinaryTree {
         root = new Node(data);
         q.offer(root);
 
-        while (!q.isEmpty()) {
+        while (!q.isEmpty() && i < arr.length) {
             Node temp = q.peek();
             q.poll();
 
@@ -55,6 +56,9 @@ public class BinaryTree {
             if(rightdata != -1){
                 temp.rigth = new Node(rightdata);
                 q.offer(temp.rigth);
+            }
+            if(leftdata == -1 && rightdata == -1){
+                countLeafNode++;
             }
         }
 
@@ -162,14 +166,18 @@ public class BinaryTree {
         root = buildTreeUsingLevelOrder(root);
        System.out.println("<----Print---->");
        printLevelOredreTraversal(root);
-       System.out.println("<------reverse print------>");
-       printReverseOrderTravel(root);
-       System.out.println();
-       System.out.println("\nPreOrder");
-       printPreOrder(root);
-       System.out.println("\nInOrder");
-       printInOrder(root);
-       System.out.println("\nPostOrder");
-       printPostOrder(root);
+
+    //    System.out.println("<------reverse print------>");
+    //    printReverseOrderTravel(root);
+    //    System.out.println();
+    //    System.out.println("\nPreOrder");
+    //    printPreOrder(root);
+    //    System.out.println("\nInOrder");
+    //    printInOrder(root);
+    //    System.out.println("\nPostOrder");
+    //    printPostOrder(root);
+
+    System.out.println("leafnode "+countLeafNode);
+
     }
 }
