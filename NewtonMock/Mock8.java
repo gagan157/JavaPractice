@@ -16,17 +16,17 @@ Input : "hello world"
 
 Output: "h1 e1 l3 o2 w1 r1 d1" */
 
-class Node{
-    int data;
-    Node next;
-
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-}
 
 public class Mock8 {
+    static class Node{
+        int data;
+        Node next;
+    
+        Node(int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
     public static void PrintStr(String str) {
         HashMap<String,Integer> map = new HashMap<>();
 
