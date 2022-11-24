@@ -2,11 +2,11 @@ package PracticeLoveBabberSheet.Arrays;
 
 
 
+//Another method = tournament method
 class Pair {
     int max;
     int min;    
 }
-//Another method = tournament method
 public class MinOrMax {
     public static Pair minOrMax(int arr[]) {
         Pair minmax = new Pair();
