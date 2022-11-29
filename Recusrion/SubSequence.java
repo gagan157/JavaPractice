@@ -42,14 +42,33 @@ public class SubSequence {
         return newarr;
     }
     
+    public static void PrintsubSequence(String str,String path,ArrayList<String> ans) {
+        if(str.length() == 0){
+            // for print
+            System.out.println(path);
+
+            // for save data
+            // ans.add(path);
+            return;
+        }
+
+        char fischar = str.charAt(0);
+        String latestStr = str.substring(1);
+        // System.out.println("got = "+fischar+" rem ="+latestStr);
+        PrintsubSequence(latestStr, path+fischar,ans);
+        PrintsubSequence(latestStr, path,ans);
+    }
     public static void main(String[] args) {
         String name = "abc";
         // ArrayList<String> ans = solution2(name);
         ArrayList<String> ans = new ArrayList<>();
-        solution(name,0,"",ans);   
+        // solution(name,0,"",ans);   
 
-        for (int i = 0; i < ans.size(); i++) {
-            System.out.println(ans.get(i));
-        }
+        // for (int i = 0; i < ans.size(); i++) {
+        //     System.out.println(ans.get(i));
+        // }
+
+        PrintsubSequence(name, "",ans);
+        // System.out.println(ans);
     }
 }
